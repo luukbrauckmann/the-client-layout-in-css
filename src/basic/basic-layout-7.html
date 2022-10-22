@@ -6,13 +6,50 @@
     <title>Basic Layout 7</title>
     <link rel="stylesheet" href="../style.css" />
     <style>
-      /* Doe hier jouw ding! */
+      body {
+				background-color: black;
+				display: flex;
+				justify-content: center;
+			}
+			body > div {
+				background-color: white;
+				height: 297mm;
+				width: 210mm;
+				padding: .5rem;
+				display: grid;
+				grid-template-columns: .3fr 1fr;
+				grid-template-rows: .25fr 1fr .2fr;
+				grid-template-areas:
+					'nav header'
+					'nav main'
+					'nav footer';
+				gap: .5rem;
+			}
+			body > div * {
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: clip;
+			}
+			header {
+				grid-area: header;
+			}
+			nav {
+				grid-area: nav;
+			}
+			main {
+				grid-area: main;
+			}
+			footer {
+				grid-area: footer;
+			}
     </style>
   </head>
   <body id="basic-layout-7">
-    <header><h1>Basic Layout 7</h1></header>
-    <nav><a href="../index.html">Terug naar het overzicht</a></nav>
-    <main></main>
-    <footer></footer>
+		<div>
+			<header><h1>Basic Layout 7</h1></header>
+			<nav><a href="../index.html">Terug naar het overzicht</a></nav>
+			<main></main>
+			<footer></footer>
+		</div>
   </body>
 </html>

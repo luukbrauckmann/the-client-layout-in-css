@@ -6,13 +6,50 @@
     <title>Basic Layout 3</title>
     <link rel="stylesheet" href="../style.css" />
     <style>
-      /* Doe hier jouw ding! */
+      body {
+				background-color: black;
+				display: flex;
+				justify-content: center;
+			}
+			body > div {
+				background-color: white;
+				height: 297mm;
+				width: 210mm;
+				padding: .5rem;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: 1fr .2fr .2fr;
+				grid-template-areas:
+					'main main'
+					'footer footer'
+					'header nav';
+				gap: .5rem;
+			}
+			body > div * {
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: clip;
+			}
+			header {
+				grid-area: header;
+			}
+			nav {
+				grid-area: nav;
+			}
+			main {
+				grid-area: main;
+			}
+			footer {
+				grid-area: footer;
+			}
     </style>
   </head>
   <body id="basic-layout-3">
-    <header><h1>Basic Layout 3</h1></header>
-    <nav><a href="../index.html">Terug naar het overzicht</a></nav>
-    <main></main>
-    <footer></footer>
+		<div>
+			<header><h1>Basic Layout 3</h1></header>
+			<nav><a href="../index.html">Terug naar het overzicht</a></nav>
+			<main></main>
+			<footer></footer>
+		</div>
   </body>
 </html>
